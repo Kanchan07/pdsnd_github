@@ -12,6 +12,10 @@ chicago.csv
 new_york_city.csv
 Washington.csv
 
+### List of what software, firmware and hardware you may require
+Atom text editor
+Git bash
+Python 3.8
 ### Credits
 https://classroom.udacity.com/nanodegrees/nd104/parts/53470233-d93c-4a31-a59f-11388272fe6b/modules/0f8a717f-4ac2-49d7-9ac4-15ae692793fa/lessons/ee7d089a-4a92-4e5d-96d2-bb256fae28e9/concepts/880df209-4c85-4151-89c9-02ea6664936f
 https://classroom.udacity.com/nanodegrees/nd104/parts/53470233-d93c-4a31-a59f-11388272fe6b/modules/0f8a717f-4ac2-49d7-9ac4-15ae692793fa/lessons/ee7d089a-4a92-4e5d-96d2-bb256fae28e9/concepts/d82f015d-fe75-4de1-b76b-0fdebe4cd9d7
