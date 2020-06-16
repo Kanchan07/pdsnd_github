@@ -1,7 +1,7 @@
 import time
 import pandas as pd
 import numpy as np
-
+# Data provided in the project
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
@@ -81,7 +81,7 @@ def load_data(city, month, day):
     if day != 'all':
         # filter by day of week to create the new dataframe
         df = df[df['day'] == day.title()]
-        
+
     return df
 
 def time_stats(df):
@@ -118,14 +118,14 @@ def station_stats(df):
     # TO DO: display most commonly used end station
     commonly_used_end_station = df['End Station'].mode()[0]
     print('The most commonly used end station: ', commonly_used_end_station)
- 
+
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-    
+
     # TO DO: display most frequent combination of start station and end station trip
     start_end_combination = df.groupby(['Start Station', 'End Station']).count()
     print('\nMost Commonly used combination of start station and end station trip:', commonly_used_start_station, " & ", commonly_used_end_station)
-   
+
 
 def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
@@ -136,15 +136,15 @@ def trip_duration_stats(df):
     # TO DO: display total travel time
     total_travel_time = sum(df['Trip Duration'])
     print('Display total time travel:', total_travel_time/86400, "Days")
-    
+
 
 
     # TO DO: display mean travel time
     mean_travel_time = df['Trip Duration'].mean()
     print('Display mean travel time:', mean_travel_time/60, "Minutes")
-    
-    
-               
+
+
+
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -173,22 +173,22 @@ def user_stats(df):
         print('Display the earliest year of birth:',earliest_year_of_birth)
     except KeyError:
         print('Unable to find the earliest year of birth')
-        
+
     try:
         most_recent_year = df['Birth Year'].max()
         print('Display the most year of birth:',most_recent_year)
     except KeyError:
         print('Unable to find the most year of birth')
-       
+
     try:
         most_common_year_of_birth = df['Birth Year'].value_counts().idxmax()
         print('Display the most common year of birth:', most_common_year_of_birth)
     except KeyError:
         print('Unable to find the most year of birth')
-        
+
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-    
+
   # Request user input for more data
     user_input = input('Would you like to see some data? Please enter yes or no: ').lower()
     if user_input in ('yes'):
@@ -199,7 +199,7 @@ def user_stats(df):
         see_more_data = input('Would you like to see more data? Please enter yes or no: ').lower()
         if see_more_data not in ('yes'):
             break
-            
+
 def main():
     while True:
         city, month, day = get_filters()
@@ -217,9 +217,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
-    
-    
-    
-    
-    
